@@ -54,10 +54,9 @@ nav {
 } */
 
 /* NOTICES */
-
 .notice-container {
-    width: 100%;
-    padding: 0px;
+  width: 100%;
+  padding: 0px;
 }
 
 .notice {
@@ -82,11 +81,6 @@ nav {
   background-position: center;
 }
 
-/* .notice-image img {
-  overflow: hidden;
-  width: 100%;
-} */
-
 .notice-data-container {
   margin-top: 20px;
   padding: 10px;
@@ -100,54 +94,56 @@ nav {
 }
 
 .species-badge {
-    background-color: #606B00;
-    padding: 5px;
+  background-color: #606b00;
+  padding: 5px;
 }
 
 .reward-badge {
-    background-color: #CB5B00;
-    padding: 5px;
+  background-color: #cb5b00;
+  padding: 5px;
 }
 
 .create-new-notice {
-  padding: 30px;
-  flex-grow: 100;
+  padding: 15px;
+  flex-grow: 1;
+  min-height: 100%;
 }
 
 .create-new-notice-bg {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
   background-color: #c2c3b6;
+  padding: 20px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 560px;
 }
 
 .create-new-notice-message {
   color: #5f680e;
   font-size: 2em;
   padding: 20px;
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 80px;
+  margin-top: 80px;
   background-color: #d0e1d4 !important;
   background-image: url("/images/footerbg.jpg");
   background-repeat: no-repeat;
   background-position: right;
   min-height: 500px;
-  color: #5F680E;
+  color: #5f680e;
   font-size: 1.2em;
 }
 
 .footer-about {
-    padding: 80px 30px;
+  padding: 80px 30px;
 }
 
 .footer-about a {
-    color: #93A300;
+  color: #93a300;
 }
 
 @media (max-width: 991px) {
@@ -160,6 +156,7 @@ footer {
     background-color: #d0e1d4;
     border-radius: 10px;
     text-align: center;
+    z-index: 100;
   }
 
   .navbar-nav {
