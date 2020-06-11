@@ -1,3 +1,74 @@
 body {
     background:#FEFFF5;
 }
+
+nav {
+    margin: 50px auto;
+    width: 70%;
+    border-radius: 15px;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-light {
+    background-color: #D0E1D4 !important;
+}
+
+.branding-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    background-image: url("/images/logo.png");
+    background-size: auto 100px;
+    height: 100px;
+    width: 80px;
+    background-repeat: no-repeat;
+}
+
+#siteName {
+    color: #5F680E;
+    font-size: 1.5em;
+    height: min-content;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    margin-top: -20px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    color: #5F680E;
+    font-size: 1.2em;
+
+}
+
+.container {
+    max-width: 70%;
+}
+
+footer {
+    background-color: #D0E1D4 !important;
+}
+
+@media (max-width: 991px) {
+
+    .branding-container {
+        margin-top: -45px;
+        padding-top: 20px;
+    }
+
+    #navbarNavDropdown {
+        background-color: #D0E1D4;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+}
