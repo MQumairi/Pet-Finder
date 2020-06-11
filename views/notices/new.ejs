@@ -1,0 +1,96 @@
+<%- include("../partials/header.ejs"); %>
+
+<div id="main-content-containter" class="container">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputPetName">Pet Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputPetName"
+          placeholder="E.g. Absi"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputSpecies">Species</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputSpecies"
+          placeholder="E.g. Cat"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputImage1">Image 1</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputImage1"
+          placeholder="URL of image"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputImage2">Image 2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputImage2"
+          placeholder="URL of image"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputImage3">Image 3</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputImage3"
+          placeholder="URL of image"
+        />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputImage4">Image 4</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputImage4"
+          placeholder="URL of image"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputNoticeBody">Notice Body</label>
+        <textarea
+          class="form-control"
+          id="inputNoticeBody"
+          rows="4"
+          placeholder="Add any relevant information about your pet here. Accepts Markup Styling."
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputReward">Reward</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputReward"
+            placeholder="Input a reward for the finder of your pet. Optional."
+          />
+        </div>
+      </div>
+
+    <button type="submit" class="btn btn-lg btn-pet-submit">Submit</button>
+  </form>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

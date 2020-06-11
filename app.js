@@ -15,8 +15,43 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
 
+//***********
+//LANDING
+//***********
 app.get("/", function (req, res) {
-  res.render("index.ejs");
+  res.redirect("/notices");
+});
+
+//***********
+//NOTICES
+//***********
+
+//INDEX
+app.get("/notices", function (req, res) {
+  res.render("notices/index.ejs");
+});
+
+//NEW
+app.get("/notices/new", function (req, res) {
+  res.render("notices/new.ejs");
+});
+
+//SINGLE
+app.get("/notices/:id", function (req, res) {
+    res.render("notices/single.ejs", {notice: req.params.id});
+//   Blog.findById(req.params.id, function (err, foundBlog) {
+//     if (err) {
+//       console.log("Error: " + err);
+//       res.redirect("/");
+//     } else {
+//       res.render("show", { blog: foundBlog });
+//     }
+//   });
+});
+
+//404
+app.get("*", function (req, res) {
+  res.send("ERROR 404");
 });
 
 //Tell express to listen to requests on port 3000
