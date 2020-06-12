@@ -1,7 +1,7 @@
 <%- include("../partials/header.ejs"); %>
 
 <div id="main-content-containter" class="container">
-  <form>
+  <form method="POST" action="/notices">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputPetName">Pet Name</label>
@@ -10,6 +10,7 @@
           class="form-control"
           id="inputPetName"
           placeholder="E.g. Absi"
+          name="notice[petName]"
         />
       </div>
       <div class="form-group col-md-6">
@@ -19,6 +20,7 @@
           class="form-control"
           id="inputSpecies"
           placeholder="E.g. Cat"
+          name="notice[species]"
         />
       </div>
     </div>
@@ -31,6 +33,7 @@
           class="form-control"
           id="inputImage1"
           placeholder="URL of image"
+          name="notice[img1]"
         />
       </div>
       <div class="form-group col-md-6">
@@ -40,6 +43,7 @@
           class="form-control"
           id="inputImage2"
           placeholder="URL of image"
+          name="notice[img2]"
         />
       </div>
     </div>
@@ -52,6 +56,7 @@
           class="form-control"
           id="inputImage3"
           placeholder="URL of image"
+          name="notice[img3]"
         />
       </div>
       <div class="form-group col-md-6">
@@ -61,6 +66,7 @@
           class="form-control"
           id="inputImage4"
           placeholder="URL of image"
+          name="notice[img4]"
         />
       </div>
     </div>
@@ -73,6 +79,7 @@
           id="inputNoticeBody"
           rows="4"
           placeholder="Add any relevant information about your pet here. Accepts Markup Styling."
+          name="notice[body]"
         ></textarea>
       </div>
     </div>
@@ -85,6 +92,7 @@
             class="form-control"
             id="inputReward"
             placeholder="Input a reward for the finder of your pet. Optional."
+            name="notice[reward]"
           />
         </div>
       </div>

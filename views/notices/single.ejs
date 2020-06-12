@@ -4,21 +4,23 @@
   <div class="single-container">
 
     <div class="single-header">
-      <div class="single-title">Absi</div>
+      <div class="single-title"><%= notice.petName; %></div>
       <div class="single-tags">
-        <span class="badge badge-primary species-badge">Cat</span>
+        <span class="badge badge-primary species-badge"><%= notice.species; %></span>
+        <% if(notice.reward) { %> 
         <span class="badge badge-secondary reward-badge">Reward</span>
+        <% } %> 
       </div>
     </div>
 
     <div class="single-image-list">
-        <div class="single-image" style="background-image: url('/images/absi.jpg');"></div>
-        <div class="single-image" style="background-image: url('/images/absi.jpg');"></div>
+      <% notice.images.forEach(image => { %>
+        <div class="single-image" style="background-image: url('<%= image; %>');"></div>
+      <% }); %> 
     </div>
 
-
     <div class="single-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos doloremque at optio quod repellendus, expedita dolores voluptates quidem molestiae harum sunt. Dolores optio similique eaque dignissimos veritatis aliquam nesciunt.
+      <%= notice.body; %> 
     </div>
 
 

@@ -6,58 +6,22 @@
   <div class="container notice-container">
     <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
 
-      <div class="col">
-        <div class="notice">
-          <div class="notice-bg">
-            <div class="notice-image" style="background-image: url('/images/absi.jpg');"></div>
-            <div class="notice-data-container">
-              <div class="notice-title"> <a href="/notices/abce121">Absi</a></div>
-              <span class="badge badge-primary species-badge">Primary</span>
-              <span class="badge badge-secondary reward-badge">Secondary</span>
+      <% notices.forEach(notice => { %>
+        <div class="col">
+          <div class="notice">
+            <div class="notice-bg">
+              <div class="notice-image" style="background-image: url('<%= notice.images[0]; %>');"></div>
+              <div class="notice-data-container">
+                <div class="notice-title"> <a href="/notices/<%= notice._id; %>"><%= notice.petName; %></a></div>
+                <span class="badge badge-primary species-badge"><%= notice.species %> </span>
+                  <% if(notice.reward) { %>
+                    <span class="badge badge-secondary reward-badge">Reward</span>
+                  <% }%>
+               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col">
-        <div class="notice">
-          <div class="notice-bg">
-            <div class="notice-image" style="background-image: url('/images/absi.jpg');"></div>
-            <div class="notice-data-container">
-              <div class="notice-title">Absi</div>
-              <span class="badge badge-primary species-badge">Primary</span>
-              <span class="badge badge-secondary reward-badge">Secondary</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="notice">
-          <div class="notice-bg">
-            <div class="notice-image" style="background-image: url('/images/absi.jpg');"></div>
-            <div class="notice-data-container">
-              <div class="notice-title">Absi</div>
-              <span class="badge badge-primary species-badge">Primary</span>
-              <span class="badge badge-secondary reward-badge">Secondary</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col">
-        <div class="notice">
-          <div class="notice-bg">
-            <div class="notice-image" style="background-image: url('/images/absi.jpg');"></div>
-            <div class="notice-data-container">
-              <div class="notice-title">Absi</div>
-              <span class="badge badge-primary species-badge">Primary</span>
-              <span class="badge badge-secondary reward-badge">Secondary</span>
-            </div>
-          </div>
-        </div>
-      </div>
+     <% }); %>
 
       <div clss="col">
         <div class="create-new-notice">
