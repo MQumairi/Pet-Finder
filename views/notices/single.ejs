@@ -1,0 +1,33 @@
+<%- include("../partials/header.ejs"); %>
+
+<div id="main-content-containter" class="container">
+  <div class="single-container">
+
+    <div class="single-header">
+      <div class="single-title">Absi</div>
+      <div class="single-tags">
+        <span class="badge badge-primary species-badge">Cat</span>
+        <span class="badge badge-secondary reward-badge">Reward</span>
+      </div>
+    </div>
+
+    <div class="single-image-list">
+        <div class="single-image" style="background-image: url('/images/absi.jpg');"></div>
+        <div class="single-image" style="background-image: url('/images/absi.jpg');"></div>
+    </div>
+
+
+    <div class="single-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eos doloremque at optio quod repellendus, expedita dolores voluptates quidem molestiae harum sunt. Dolores optio similique eaque dignissimos veritatis aliquam nesciunt.
+    </div>
+
+
+  </div>
+
+  <div class="add-comment-container">
+    <a href="/notices/<%= notice %>/comments/new" class="btn btn-lg btn-pet-submit">Add Comment</a>
+  </div>
+
+</div>
+
+<%- include("../partials/footer.ejs"); %>
