@@ -2,34 +2,46 @@
 
 <div id="main-content-containter" class="container">
   <div class="single-container">
-
     <div class="single-header">
       <div class="single-title"><%= notice.petName; %></div>
       <div class="single-tags">
-        <span class="badge badge-primary species-badge"><%= notice.species; %></span>
-        <% if(notice.reward) { %> 
+        <span class="badge badge-primary species-badge"
+          ><%= notice.species; %></span
+        >
+        <% if(notice.reward) { %>
         <span class="badge badge-secondary reward-badge">Reward</span>
-        <% } %> 
+        <% } %>
       </div>
     </div>
 
     <div class="single-image-list">
       <% notice.images.forEach(image => { %>
-        <div class="single-image" style="background-image: url('<%= image; %>');"></div>
-      <% }); %> 
+      <div
+        class="single-image"
+        style="background-image: url('<%= image; %>');"
+      ></div>
+      <% }); %>
     </div>
 
     <div class="single-body">
-      <%= notice.body; %> 
+      <%= notice.body; %>
     </div>
-
-
   </div>
 
   <div class="add-comment-container">
-    <a href="/notices/<%= notice._id; %>/comments/new" class="btn btn-lg btn-pet-submit">Add Comment</a>
+    <% notice.comments.forEach(comment => { %>
+    <div>
+      <div><%= comment.author %></div>
+      <div><%= comment.body %></div>
+    </div>
+    <br>
+    <% }); %>
+    <a
+      href="/notices/<%= notice._id; %>/comments/new"
+      class="btn btn-lg btn-pet-submit"
+      >Add Comment</a
+    >
   </div>
-
 </div>
 
 <%- include("../partials/footer.ejs"); %>
